@@ -48,6 +48,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import FAQSection from "./FaqsTab";
+import Footer from "./Footer";
 
 export function PortfolioSuite() {
   const [activeTab, setActiveTab] = useState("home");
@@ -511,6 +512,7 @@ export function PortfolioSuite() {
                       <Skills />
                       <Experience />
                     </div>
+                  <Footer/>
                   </TabsContent>
 
                   <TabsContent
