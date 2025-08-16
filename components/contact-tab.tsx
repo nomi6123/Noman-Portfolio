@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, User, MessageSquare, Loader2, Clock, CheckCircle, LogOut, Aperture } from "lucide-react"
+import { Mail, Phone, MapPin, Send, Github, Linkedin, User, MessageSquare, Loader2, Clock, CheckCircle, LogOut, Aperture } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"

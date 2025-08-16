@@ -242,7 +242,7 @@ export function PortfolioSuite() {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="mt-8 space-y-3">
+                  <div className="mt-1 space-y-3">
                     <a
                       href="resume.pdf"
                       download="Muhammad_Noman_CV.pdf"
@@ -251,14 +251,14 @@ export function PortfolioSuite() {
                     >
                       <Button
                         variant="outline"
-                        className="w-full rounded-xl bg-white border-2 border-gray-200 hover:bg-gray-50 text-gray-700 transition-all duration-300 shadow-sm"
+                        className="w-full rounded-xl  bg-white border-2 border-gray-200 hover:bg-gray-50 text-gray-700 transition-all duration-300 shadow-sm"
                       >
                         <Download className="mr-2 h-4 w-4" />
                         Download CV
                       </Button>
                     </a>
                     <Button
-                      className="w-full rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-md hover:shadow-lg transition-all duration-300"
+                      className="w-full rounded-xl  bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-md hover:shadow-lg transition-all duration-300"
                       asChild
                     >
                       <a
@@ -448,9 +448,15 @@ export function PortfolioSuite() {
                     <TabsTrigger
                       key={value}
                       value={value}
-                      className="rounded-lg md:rounded-xl py-2 md:py-3 px-2 md:px-4 hover:bg-white/70 text-gray-600 transition-all duration-300 cursor-pointer data-[state=active]:bg-white data-[state=active]:shadow-md data-[state=active]:text-gray-900 data-[state=active]:scale-105 flex flex-col md:flex-row items-center gap-1 md:gap-2 text-xs md:text-sm font-medium"
+                      className="rounded-lg md:rounded-xl py-2 md:py-3 px-2 md:px-4 
+             hover:bg-white/70 text-gray-600 transition-all duration-300 
+             cursor-pointer data-[state=active]:bg-white data-[state=active]:shadow-md 
+             data-[state=active]:text-gray-900 data-[state=active]:scale-105 
+             flex flex-col md:flex-row items-center gap-1 md:gap-2 
+             text-xs md:text-sm font-medium"
                     >
-                      <Icon className="h-3 w-3 md:h-4 md:w-4" />
+                      {/* 👇 icon hidden on mobile */}
+                      <Icon className="hidden md:inline-block h-3 w-3 md:h-4 md:w-4" />
                       <span className="capitalize text-xs md:text-sm">
                         {value}
                       </span>
@@ -459,7 +465,7 @@ export function PortfolioSuite() {
                 </TabsList>
 
                 {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-2 md:gap-3 w-full lg:w-auto">
+                <div className="hidden md:flex flex-col sm:flex-row gap-2 md:gap-3 w-full lg:w-auto">
                   <a
                     href="resume.pdf"
                     download="Muhammad_Noman_CV.pdf"
@@ -494,7 +500,7 @@ export function PortfolioSuite() {
                 exit={{ opacity: 0, y: -20, scale: 0.98 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
               >
-                <div className="backdrop-blur-sm  rounded-2xl md:rounded-3xl border border-white/20 shadow-xl px-1 min-h-[60vh] md:min-h-[70vh]">
+                <div className="backdrop-blur-sm  rounded-2xl md:rounded-3xl border  border-white/20 shadow-xl  min-h-[60vh] md:min-h-[70vh]">
                   <TabsContent
                     value="home"
                     className="space-y-4 md:space-y-8 mt-0"
@@ -538,27 +544,6 @@ export function PortfolioSuite() {
             </AnimatePresence>
           </Tabs>
         </main>
-      </div>
-
-      {/* Mobile Bottom Navigation */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-white/20 shadow-lg z-20">
-        <div className="flex justify-center gap-1 px-4 py-2">
-          {Object.entries(tabIcons).map(([value, Icon]) => (
-            <button
-              key={value}
-              onClick={() => setActiveTab(value)}
-              className={cn(
-                "flex flex-col items-center justify-center px-3 py-2 rounded-lg transition-all duration-300 flex-1 max-w-[80px]",
-                activeTab === value
-                  ? "text-purple-600 bg-purple-50"
-                  : "text-gray-500 hover:text-gray-700 hover:bg-gray-50"
-              )}
-            >
-              <Icon className="h-4 w-4 mb-1" />
-              <span className="text-xs capitalize">{value}</span>
-            </button>
-          ))}
-        </div>
       </div>
     </div>
   );

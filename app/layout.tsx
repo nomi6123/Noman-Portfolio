@@ -7,9 +7,9 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Muhammad Noman - Frontend Developer | React.js, Next.js, AI, Video & Graphic Design",
+  title: "Muhammad Noman  Frontend Developer | React.js, Next.js, AI, Video & Graphic Design",
   description:
-    "Muhammad Noman — Professional Frontend Developer skilled in React.js, Next.js, AI-based applications, video & photo editing, UI/UX, and graphic design. View my portfolio for modern, creative, and responsive web solutions.",
+    "Muhammad Noman  Professional Frontend Developer skilled in React.js, Next.js, AI-based applications, video & photo editing, UI/UX, and graphic design. View my portfolio for modern, creative, and responsive web solutions.",
   generator: "v0.dev",
   keywords: [
     "Muhammad Noman",
@@ -28,11 +28,11 @@ export const metadata: Metadata = {
     title: "Muhammad Noman - Frontend Developer & Creative Designer",
     description:
       "Portfolio of Muhammad Noman, a Frontend Developer specializing in React.js, Next.js, AI, and creative design.",
-    url: "https://yourdomain.com",
+    url: "https://nomanfrontenddev.vercel.app",
     siteName: "Muhammad Noman Portfolio",
     images: [
       {
-        url: "https://yourdomain.com/preview.png",
+        url: "https://nomanfrontenddev.vercel.app/preview.png",
         width: 1200,
         height: 630,
         alt: "Muhammad Noman Portfolio Preview"
