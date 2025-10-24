@@ -54,10 +54,10 @@ export function AboutTab() {
               </p>
             </div>
             <a href="resume.pdf" download="Muhammad_Noman_CV.pdf">
-            <Button className="rounded-full bg-white hover:bg-black hover:text-white duration-300 cursor-pointer text-teal-700 hover:scale-105 hover:shadow-lg transition-all">
-              <Download className="mr-2 h-4 w-4" />
-              Download Resume
-            </Button>
+              <Button className="rounded-full bg-white hover:bg-black hover:text-white duration-300 cursor-pointer text-teal-700 hover:scale-105 hover:shadow-lg transition-all">
+                <Download className="mr-2 h-4 w-4" />
+                Download Resume
+              </Button>
             </a>
           </div>
         </div>
@@ -72,11 +72,11 @@ export function AboutTab() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <Card className="rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all">
+            <Card className="rounded-2xl bg-white border border-neutral-200 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all">
               <CardContent className="p-6">
                 <div className="flex justify-center mb-3 text-teal-600">{stat.icon}</div>
                 <div className="text-2xl font-semibold mb-1">{stat.value}</div>
-                <div className="text-sm text-neutral-500 dark:text-neutral-400">{stat.label}</div>
+                <div className="text-sm text-neutral-500">{stat.label}</div>
               </CardContent>
             </Card>
           </motion.div>
@@ -89,40 +89,35 @@ export function AboutTab() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <Card className="rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shadow-sm hover:shadow-md transition-all">
+        <Card className="rounded-2xl bg-white border border-neutral-200 shadow-sm hover:shadow-md transition-all">
           <CardHeader>
-            <CardTitle className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
-              My Story
-            </CardTitle>
-            <CardDescription className="text-neutral-500 dark:text-neutral-400">
-              How I became a developer
-            </CardDescription>
+            <CardTitle className="text-lg font-semibold text-neutral-900">My Story</CardTitle>
+            <CardDescription className="text-neutral-500">How I became a developer</CardDescription>
           </CardHeader>
-          <CardContent className="space-y-4 text-neutral-700 dark:text-neutral-300">
-           <p>
-  Hi, I’m Muhammad Noman — a passionate front-end developer specializing in creating responsive and user-friendly web experiences
-  with React, Next.js, Tailwind CSS, and Webflow.
-</p>
-<p>
-  My skill set also extends to creative media production, including Canva design, audio editing, CapCut video editing, and photo editing.
-  I’m experienced in building sleek, high-performance websites, editing engaging videos, designing eye-catching visuals, and enhancing
-  content for maximum impact.
-</p>
-<p>
-  Skills: HTML, CSS, JavaScript, React, Next.js, Tailwind CSS, Webflow, Canva, CapCut, Audio Editing, Photo Editing.
-</p>
-<p>
-  Whether it’s coding an interactive interface or designing media content, I enjoy bringing ideas to life that inspire and connect with people.
-</p>
-
+          <CardContent className="space-y-4 text-neutral-700">
+            <p>
+              Hi, I’m Muhammad Noman — a passionate front-end developer specializing in creating responsive and user-friendly web experiences
+              with React, Next.js, Tailwind CSS, and Webflow.
+            </p>
+            <p>
+              My skill set also extends to creative media production, including Canva design, audio editing, CapCut video editing, and photo editing.
+              I’m experienced in building sleek, high-performance websites, editing engaging videos, designing eye-catching visuals, and enhancing
+              content for maximum impact.
+            </p>
+            <p>
+              Skills: HTML, CSS, JavaScript, React, Next.js, Tailwind CSS, Webflow, Canva, CapCut, Audio Editing, Photo Editing.
+            </p>
+            <p>
+              Whether it’s coding an interactive interface or designing media content, I enjoy bringing ideas to life that inspire and connect with people.
+            </p>
           </CardContent>
         </Card>
       </motion.div>
 
       {/* Technical Skills */}
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold text-neutral-900 dark:text-neutral-100">Technical Skills</h2>
-        <div className="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-6 shadow-sm">
+        <h2 className="text-xl font-semibold text-neutral-900">Technical Skills</h2>
+        <div className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
           <div className="space-y-6">
             {skills.map((skill, index) => (
               <motion.div
@@ -134,7 +129,7 @@ export function AboutTab() {
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-teal-100 dark:bg-teal-900 text-teal-600 dark:text-teal-300">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-teal-100 text-teal-600">
                       {skill.icon}
                     </div>
                     <span className="font-medium">{skill.name}</span>
@@ -153,8 +148,8 @@ export function AboutTab() {
 
       {/* Experience */}
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold text-neutral-900 dark:text-neutral-100">Experience</h2>
-        <div className="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-6 shadow-sm">
+        <h2 className="text-xl font-semibold text-neutral-900">Experience</h2>
+        <div className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
           <div className="space-y-6">
             {experience.map((exp, index) => (
               <motion.div
@@ -162,7 +157,7 @@ export function AboutTab() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative pl-6 border-l-2 border-teal-200 dark:border-teal-800 hover:border-teal-400 transition-all"
+                className="relative pl-6 border-l-2 border-teal-200 hover:border-teal-400 transition-all"
               >
                 <div className="absolute -left-2 top-0 h-4 w-4 rounded-full bg-gradient-to-r from-teal-500 to-emerald-500" />
                 <div className="space-y-1">
@@ -183,7 +178,7 @@ export function AboutTab() {
 
       {/* Education */}
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold text-neutral-900 dark:text-neutral-100">Education</h2>
+        <h2 className="text-xl font-semibold text-neutral-900">Education</h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           {educationData.map((edu, index) => (
             <motion.div
@@ -191,15 +186,15 @@ export function AboutTab() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all p-6"
+              className="rounded-2xl bg-white border border-neutral-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all p-6"
             >
               <span className="block text-xs uppercase text-teal-500 mb-2 font-medium">
                 {index === 0 ? "Professional Training" : index === 1 ? "Higher Education" : "Certification"}
               </span>
               <h3 className="text-lg font-semibold mb-2">{edu.degree}</h3>
-              <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">{edu.university}</p>
+              <p className="text-sm font-medium text-neutral-700">{edu.university}</p>
               <p className="text-xs text-neutral-500">{edu.location}</p>
-              <p className="mt-3 text-sm text-neutral-600 dark:text-neutral-400">{edu.description}</p>
+              <p className="mt-3 text-sm text-neutral-600">{edu.description}</p>
             </motion.div>
           ))}
         </div>
