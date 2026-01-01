@@ -38,7 +38,8 @@ export function AboutTab() {
   ]
 
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 text-neutral-900">
+
       {/* Hero Section */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
@@ -46,15 +47,16 @@ export function AboutTab() {
         transition={{ duration: 0.6 }}
       >
         <div className="rounded-3xl bg-[#00BC9C] p-8 shadow-lg">
-          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between text-white">
-            <div className="space-y-2">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <div className="space-y-2 text-white">
               <h2 className="text-3xl font-semibold tracking-tight">About Me</h2>
               <p className="max-w-[600px] text-white/90">
                 Learn more about my journey, skills, and what drives my passion for development.
               </p>
             </div>
+
             <a href="resume.pdf" download="Muhammad_Noman_CV.pdf">
-              <Button className="rounded-full bg-white hover:bg-black hover:text-white duration-300 cursor-pointer text-teal-700 hover:scale-105 hover:shadow-lg transition-all">
+              <Button className="rounded-full bg-white text-teal-700 hover:bg-black hover:text-white duration-300 cursor-pointer hover:scale-105 hover:shadow-lg transition-all">
                 <Download className="mr-2 h-4 w-4" />
                 Download Resume
               </Button>
@@ -75,7 +77,7 @@ export function AboutTab() {
             <Card className="rounded-2xl bg-white border border-neutral-200 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all">
               <CardContent className="p-6">
                 <div className="flex justify-center mb-3 text-teal-600">{stat.icon}</div>
-                <div className="text-2xl font-semibold mb-1">{stat.value}</div>
+                <div className="text-2xl font-semibold mb-1 text-neutral-900">{stat.value}</div>
                 <div className="text-sm text-neutral-500">{stat.label}</div>
               </CardContent>
             </Card>
@@ -100,15 +102,13 @@ export function AboutTab() {
               with React, Next.js, Tailwind CSS, and Webflow.
             </p>
             <p>
-              My skill set also extends to creative media production, including Canva design, audio editing, CapCut video editing, and photo editing.
-              I’m experienced in building sleek, high-performance websites, editing engaging videos, designing eye-catching visuals, and enhancing
-              content for maximum impact.
+              My skill set also extends to creative media production, including Graphic design, audio editing, CapCut video editing, and photo editing.
             </p>
             <p>
-              Skills: HTML, CSS, JavaScript, React, Next.js, Tailwind CSS, Webflow, Canva, CapCut, Audio Editing, Photo Editing.
+              Skills: HTML, CSS, JavaScript, React, Next.js, Tailwind CSS, Webflow, CorelDraw, CapCut.
             </p>
             <p>
-              Whether it’s coding an interactive interface or designing media content, I enjoy bringing ideas to life that inspire and connect with people.
+              Whether it’s coding an interactive interface or designing media content, I enjoy bringing ideas to life.
             </p>
           </CardContent>
         </Card>
@@ -132,7 +132,7 @@ export function AboutTab() {
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-teal-100 text-teal-600">
                       {skill.icon}
                     </div>
-                    <span className="font-medium">{skill.name}</span>
+                    <span className="font-medium text-neutral-900">{skill.name}</span>
                   </div>
                   <span className="text-sm text-neutral-500">{skill.level}%</span>
                 </div>
@@ -162,13 +162,13 @@ export function AboutTab() {
                 <div className="absolute -left-2 top-0 h-4 w-4 rounded-full bg-gradient-to-r from-teal-500 to-emerald-500" />
                 <div className="space-y-1">
                   <div className="flex items-center justify-between">
-                    <h3 className="font-semibold">{exp.position}</h3>
+                    <h3 className="font-semibold text-neutral-900">{exp.position}</h3>
                     <Badge variant="outline" className="rounded-full border-teal-300 text-teal-600">
                       {exp.duration}
                     </Badge>
                   </div>
                   <p className="text-sm text-neutral-500">{exp.company}</p>
-                  <p className="text-sm">{exp.description}</p>
+                  <p className="text-sm text-neutral-700">{exp.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -191,7 +191,7 @@ export function AboutTab() {
               <span className="block text-xs uppercase text-teal-500 mb-2 font-medium">
                 {index === 0 ? "Professional Training" : index === 1 ? "Higher Education" : "Certification"}
               </span>
-              <h3 className="text-lg font-semibold mb-2">{edu.degree}</h3>
+              <h3 className="text-lg font-semibold mb-2 text-neutral-900">{edu.degree}</h3>
               <p className="text-sm font-medium text-neutral-700">{edu.university}</p>
               <p className="text-xs text-neutral-500">{edu.location}</p>
               <p className="mt-3 text-sm text-neutral-600">{edu.description}</p>
@@ -199,6 +199,7 @@ export function AboutTab() {
           ))}
         </div>
       </section>
+
     </div>
   )
 }
